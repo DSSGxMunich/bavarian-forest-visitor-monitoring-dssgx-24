@@ -1,9 +1,6 @@
 # Python version: 3.10.13
 pandas
-<<<<<<< Updated upstream
-jupyter
-=======
 jupyter
 chardet
 stldecompose
->>>>>>> Stashed changes
+prophet
