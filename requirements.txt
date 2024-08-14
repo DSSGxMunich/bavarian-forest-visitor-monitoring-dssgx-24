@@ -4,3 +4,4 @@ jupyter
 chardet
 stldecompose
 prophet
+scikit-learn
