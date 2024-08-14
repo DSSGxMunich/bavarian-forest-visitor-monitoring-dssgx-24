@@ -1,7 +1,8 @@
-# Python version: 3.10.13
+# Python version: 3.10.11
 pandas
 jupyter
 chardet
 stldecompose
 prophet
 scikit-learn
+seaborn
