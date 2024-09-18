@@ -2,7 +2,7 @@
 """
 Weather Data Sourcing
 
-This script retrieves hourly weather data (Precipitation, Temperature, Wind Speed, Relative Humidity, and Sunshine Duration) for the Bavarian Forest region from the Meteostat API, and saves the processed data to a CSV file.
+This script retrieves hourly weather data (Precipitation, Temperature, Wind Speed, Relative Humidity, Sunshine Duration and snow depth) for the Bavarian Forest region from the Meteostat API, and saves the processed data to a CSV file.
 
 Usage:
 - To run this script, simply execute it using Python:
@@ -24,8 +24,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from meteostat import Point, Hourly
 import awswrangler as wr
-from impute_missing_weather_values import fill_missing_values
-from src.models.pre_processing.impute_missing_weather_values import fill_missing_values
+#from impute_missing_weather_values import fill_missing_values
+from models.pre_processing.impute_missing_weather_values import fill_missing_values
 
 
 # Ignore warnings
@@ -42,7 +42,7 @@ warnings.filterwarnings('ignore')
 
 # Set time period for sourcing the data
 START_TIME = datetime(2016, 1, 1)
-END_TIME = datetime(2024, 9, 3)
+END_TIME = datetime(2024, 7, 22)
 
 # Coordinates of the Bavarian Forest (Haselbach)
 # These coordinates are based on the weather recommendation by Google for a Bavarian Forest Weather search
@@ -112,7 +112,7 @@ def process_hourly_data(data):
             - Relative Humidity (%): Relative humidity in percent.
     """
     # Drop unnecessary columns
-    data = data.drop(columns=['dwpt', 'snow', 'wdir', 'wpgt', 'pres', 'coco'])
+    data = data.drop(columns=['dwpt', 'wdir', 'wpgt', 'pres', 'coco'])
 
     # Rename columns for clarity
     data = data.rename(columns={
@@ -121,7 +121,8 @@ def process_hourly_data(data):
         'prcp': 'Precipitation (mm)',
         'wspd': 'Wind Speed (km/h)',
         'tsun': 'Sunshine Duration (min)',
-        'rhum': 'Relative Humidity (%)'
+        'rhum': 'Relative Humidity (%)',
+        'snow': 'Snow Depth (mm)'
     })
 
     # Convert the 'Time' column to datetime format
@@ -197,7 +198,7 @@ def source_and_process_weather_data():
     # # Uncomment the following line to save the sourced data to a CSV file
 
     # # Save the processed data to a CSV file
-    # save_data_to_csv(sourced_hourly_data, 'outputs/weather_data_final/weather_data_2016-24_non_imputed_forecasted.csv')
+    save_data_to_csv(sourced_hourly_data, 'outputs/weather_data_final/weather_data_2016-24_non_imputed_forecasted.csv')
 
     write_csv_file_to_aws_s3(
     df=sourced_hourly_data,
