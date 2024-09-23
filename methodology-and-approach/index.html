@@ -383,13 +383,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-preprocessing-and-feature-engineering" class="md-nav__link">
+  <a href="#feature-selection-and-feature-engineering" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Preprocessing and Feature Engineering
+      Feature Selection and Feature Engineering
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Preprocessing and Feature Engineering">
+    <nav class="md-nav" aria-label="Feature Selection and Feature Engineering">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -411,9 +411,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-preprocessing" class="md-nav__link">
+  <a href="#data-transformation" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Preprocessing
+      Data Transformation
     </span>
   </a>
   
@@ -512,17 +512,17 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#extratree-regressor-vs-lstm" class="md-nav__link">
-    <span class="md-ellipsis">
-      ExtraTree Regressor vs LSTM
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#model-selection-for-real-time-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Selection for Real-Time Inference
+    </span>
+  </a>
   
 </li>
         
@@ -787,13 +787,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-preprocessing-and-feature-engineering" class="md-nav__link">
+  <a href="#feature-selection-and-feature-engineering" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Preprocessing and Feature Engineering
+      Feature Selection and Feature Engineering
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Preprocessing and Feature Engineering">
+    <nav class="md-nav" aria-label="Feature Selection and Feature Engineering">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -815,9 +815,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-preprocessing" class="md-nav__link">
+  <a href="#data-transformation" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Preprocessing
+      Data Transformation
     </span>
   </a>
   
@@ -916,17 +916,17 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#extratree-regressor-vs-lstm" class="md-nav__link">
-    <span class="md-ellipsis">
-      ExtraTree Regressor vs LSTM
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#model-selection-for-real-time-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Selection for Real-Time Inference
+    </span>
+  </a>
   
 </li>
         
@@ -1108,7 +1108,7 @@
 <h3 id="data-integration">Data Integration</h3>
 <p>We joined the preprocessed datasets—visitor counts, weather, and visitor center data—based on their timestamps to create a unified dataset for efficient modeling. This integration ensures that all data points align in hourly format, facilitating a comprehensive analysis of visitor traffic patterns.</p>
 <p>The resulting joined dataset encompasses all relevant features from each source, providing a robust foundation for our predictive modeling efforts. This approach allows us to leverage the combined insights from different datasets, enhancing the accuracy and effectiveness of our forecasts.</p>
-<h3 id="data-preprocessing-and-feature-engineering">Data Preprocessing and Feature Engineering</h3>
+<h3 id="feature-selection-and-feature-engineering">Feature Selection and Feature Engineering</h3>
 <p>After joining the data, we conducted various tasks, including feature selection and feature engineering. Below are the relevant aspects of this process:</p>
 <h4 id="region-wise-mapping">Region-wise Mapping</h4>
 <p>The Bavarian Forest National Park is divided into six regions, and we grouped the sensors accordingly. For each region, we aggregated the IN and OUT values based on the specific sensors that belong to that region:</p>
@@ -1133,7 +1133,7 @@ Sensors: Lusen 1, Lusen 2, Lusen 3  </p>
 <li>Z-scores for daily maximum temperature, relative humidity, and wind speed.</li>
 <li>Distance to the nearest holidays for both Bayern and Czech Republic.</li>
 </ul>
-<h4 id="data-preprocessing">Data Preprocessing</h4>
+<h4 id="data-transformation">Data Transformation</h4>
 <h4 id="handling-numerical-cyclic-and-categorical-features">Handling Numerical, Cyclic, and Categorical Features</h4>
 <ol>
 <li>
@@ -1226,16 +1226,29 @@ Sensors: Lusen 1, Lusen 2, Lusen 3  </p>
 </ul>
 <p><strong>Model Saving</strong>: After training, the model is saved for each target variable. This ensures that the trained models can be reused for inference and further fine-tuning, making the forecasting process more efficient and scalable.</p>
 <p>The LSTM model, with its ability to model complex sequential data, has proven to be a powerful tool in our visitor traffic forecasting pipeline, particularly for capturing the temporal dynamics of visitor flows across different regions of the Bavarian Forest National Park.</p>
-<h4 id="extratree-regressor-vs-lstm">ExtraTree Regressor vs LSTM</h4>
+<h3 id="model-selection-for-real-time-inference">Model Selection for Real-Time Inference</h3>
+<p>After experimenting with both the LSTM and Extra Tree Regressor models, we found that both performed admirably in terms of forecasting visitor traffic. However, our final choice of model for real-time inference was influenced by several key factors:</p>
 <ul>
-<li>Comparison of models:<ul>
-<li>Model architectures and configurations</li>
-<li>Performance evaluation on test data</li>
-<li>Strengths and weaknesses of each approach</li>
-<li>Decision rationale for choosing LSTM or ExtraTree Regressor</li>
-</ul>
+<li>
+<p><strong>Limited Dataset Size</strong>: Given the relatively small size of our dataset, we needed a model that could deliver reliable performance without requiring large amounts of data. While LSTM models are powerful for capturing complex temporal dependencies, they often require larger datasets to fully realize their potential.</p>
+</li>
+<li>
+<p><strong>Model Simplicity and Interpretability</strong>: The Extra Tree Regressor, being an ensemble learning method based on decision trees, offers a straightforward and interpretable approach to forecasting. Its simplicity means that it is less prone to overfitting on smaller datasets and provides easily understandable results, which is advantageous for real-time applications where quick insights are needed.</p>
+</li>
+<li>
+<p><strong>Computational Efficiency</strong>: In real-time inference scenarios, the computational cost and speed of model predictions are critical. The Extra Tree Regressor is computationally efficient compared to LSTM models, which can be resource-intensive due to their sequential nature and complex architecture. This efficiency makes the Extra Tree Regressor a more suitable choice for deploying in a real-time environment where low latency is essential.</p>
+</li>
+<li>
+<p><strong>Robustness to Overfitting</strong>: With fewer data points, there is a higher risk of overfitting, especially with more complex models like LSTM. The Extra Tree Regressor, with its inherent randomness and use of multiple decision trees, is more robust against overfitting, ensuring that the model generalizes better on unseen data.</p>
+</li>
+<li>
+<p><strong>Scalability for Future Datasets</strong>: As more data becomes available over time, the simplicity of the Extra Tree Regressor allows for easier retraining and updating of the model. This scalability is critical as the system evolves and more historical data is collected.</p>
+</li>
+<li>
+<p><strong>Consistency in Performance</strong>: During our model evaluation, the Extra Tree Regressor consistently delivered strong performance across various metrics, making it a reliable choice for ongoing operations.</p>
 </li>
 </ul>
+<p>Based on these considerations, we selected the Extra Tree Regressor as the model for real-time inference. This decision balances the need for accurate predictions with the practical constraints of our current dataset and computational resources, ensuring that we can provide reliable visitor traffic forecasts in the Bavarian Forest National Park.</p>
 
 
 
