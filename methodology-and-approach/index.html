@@ -449,8 +449,68 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Modeling">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extratree-regressor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExtraTree Regressor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExtraTree Regressor">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-extratree-regressor-is-ideal-for-our-use-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why ExtraTree Regressor is Ideal for Our Use Case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Implementation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lstm-long-short-term-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      LSTM (Long Short-Term Memory)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LSTM (Long Short-Term Memory)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-lstm-is-ideal-for-our-use-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why LSTM is Ideal for Our Use Case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Implementation
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#extratree-regressor-vs-lstm" class="md-nav__link">
@@ -793,8 +853,68 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Modeling">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extratree-regressor" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExtraTree Regressor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExtraTree Regressor">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-extratree-regressor-is-ideal-for-our-use-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why ExtraTree Regressor is Ideal for Our Use Case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Implementation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lstm-long-short-term-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      LSTM (Long Short-Term Memory)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LSTM (Long Short-Term Memory)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-lstm-is-ideal-for-our-use-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why LSTM is Ideal for Our Use Case
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Implementation
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#extratree-regressor-vs-lstm" class="md-nav__link">
@@ -1035,6 +1155,77 @@ Sensors: Lusen 1, Lusen 2, Lusen 3  </p>
 <p>This systematic approach to preprocessing and feature engineering sets a solid foundation for subsequent modeling and analysis.</p>
 <h3 id="modeling">Modeling</h3>
 <p>We have sliced the data from January 1, 2023, to July 22, 2024, for training purposes. During our experimentation phase, we explored various forecasting models to identify the most effective approach for predicting visitor traffic in the Bavarian Forest National Park. Ultimately, the ExtraTree Regressor and LSTM (Long Short-Term Memory) models demonstrated superior performance compared to other models.</p>
+<h3 id="extratree-regressor">ExtraTree Regressor</h3>
+<p>The ExtraTree Regressor (Extremely Randomized Trees) is a powerful ensemble learning algorithm that constructs multiple decision trees during training. Unlike traditional decision trees, where splits are chosen based on the best criteria, Extra Trees randomly select cut points in the features. This approach often reduces variance without significantly increasing bias, making Extra Trees particularly well-suited for datasets with complex patterns and large feature spaces.</p>
+<h4 id="why-extratree-regressor-is-ideal-for-our-use-case">Why ExtraTree Regressor is Ideal for Our Use Case</h4>
+<ul>
+<li>
+<p><strong>Robustness to Overfitting</strong>: Due to the random nature of tree splits, ExtraTree Regressor is less likely to overfit the training data, especially in cases where the data has high dimensionality or contains noise.</p>
+</li>
+<li>
+<p><strong>Efficiency</strong>: ExtraTree Regressor requires less computational effort compared to other ensemble methods like Random Forests, making it an efficient choice for large-scale data.</p>
+</li>
+<li>
+<p><strong>Interpretability</strong>: While still complex, the decision-tree-based structure of the ExtraTree Regressor provides a level of interpretability, allowing us to understand which features contribute most significantly to the model’s predictions.</p>
+</li>
+<li>
+<p><strong>Handling of Various Feature Types</strong>: The model can handle both numerical and categorical features, which is crucial for our dataset, containing a mix of these feature types.</p>
+</li>
+</ul>
+<h4 id="model-implementation">Model Implementation</h4>
+<p><strong>Data Preparation</strong>: The data is split into training (January 1, 2023, to April 30, 2024) and testing (May 1, 2024, to July 22, 2024) sets based on specific date ranges, ensuring the temporal structure of the data is preserved.</p>
+<p><strong>Model Setup</strong>: PyCaret is used for setting up the model, where we define numeric and categorical features, ensure no data shuffling, and use 90% of the data for training with a 5-fold cross-validation.</p>
+<p><strong>Model Training</strong>: The Extra Trees Regressor is trained on the defined training set, and predictions are made on the test set to evaluate performance.</p>
+<p><strong>Model Saving</strong>: The trained models are saved for each target variable, ensuring reproducibility and facilitating later use in inference tasks.</p>
+<p>This approach allowed us to capture the complexities in the data and produce reliable forecasts for visitor traffic in the Bavarian Forest National Park.</p>
+<h3 id="lstm-long-short-term-memory">LSTM (Long Short-Term Memory)</h3>
+<p>Long Short-Term Memory (LSTM) networks are a type of recurrent neural network (RNN) specifically designed to model sequential data and capture long-term dependencies. LSTMs are highly effective for time series forecasting due to their ability to retain information over extended periods, which is crucial for predicting visitor traffic based on past patterns.</p>
+<h4 id="why-lstm-is-ideal-for-our-use-case">Why LSTM is Ideal for Our Use Case</h4>
+<ul>
+<li>
+<p><strong>Handling Sequential Data</strong>: LSTMs are designed to process sequences of data, which is critical for our task of predicting future visitor counts based on historical patterns.</p>
+</li>
+<li>
+<p><strong>Capturing Long-Term Dependencies</strong>: The LSTM architecture effectively captures long-term dependencies, which is crucial for understanding visitor trends that may span over days or weeks.</p>
+</li>
+<li>
+<p><strong>Flexibility in Architecture</strong>: LSTMs allow for various architectural adjustments (e.g., bidirectional layers, stacking) that enable the model to capture more complex visitor traffic patterns.</p>
+</li>
+<li>
+<p><strong>Robustness to Temporal Patterns</strong>: LSTMs are capable of learning and adapting to the temporal structure of the data, making them ideal for forecasting tasks where the order and timing of data points are important.</p>
+</li>
+</ul>
+<h4 id="model-implementation_1">Model Implementation</h4>
+<p><strong>Sequence Creation</strong>: To train the LSTM, the data is prepared by creating sequences. Each sequence represents a window of 168 hours (7 days). This approach ensures that the model is trained on weekly patterns, which are crucial for accurate forecasting.</p>
+<ul>
+<li><strong>Training Sequences</strong>: The training data is split into sequences of 168 hours, with each sequence used to predict the following hour. This ensures that the model learns from both short-term fluctuations and longer-term trends.</li>
+</ul>
+<p><strong>Model Architecture</strong>: The LSTM model architecture is designed to capture complex temporal patterns in the data. Key components of the architecture include:</p>
+<ul>
+<li>
+<p><strong>Bidirectional LSTM Layers</strong>: These layers process the sequence data in both forward and backward directions, allowing the model to learn from both past and future contexts within each sequence.</p>
+</li>
+<li>
+<p><strong>Dropout Layers</strong>: Dropout layers are included to prevent overfitting by randomly dropping units during training, encouraging the model to learn more robust features.</p>
+</li>
+<li>
+<p><strong>Dense Layer</strong>: The final Dense layer outputs predictions for the target variable, leveraging the features learned by the preceding LSTM layers.</p>
+</li>
+</ul>
+<p><strong>Training and Evaluation</strong>: The LSTM model is trained on the prepared sequences with a validation split to monitor performance. Early stopping is implemented to prevent overfitting, stopping the training if the validation loss does not improve for several consecutive epochs.</p>
+<ul>
+<li>
+<p><strong>Optimizer</strong>: The Adam optimizer is used, which is effective for handling the complexity of LSTM networks.</p>
+</li>
+<li>
+<p><strong>Loss Function</strong>: The Mean Squared Error (MSE) loss function is employed to minimize large errors by focusing on the difference between predicted and actual values.</p>
+</li>
+<li>
+<p><strong>Early Stopping</strong>: This technique monitors validation loss and restores the best weights if overfitting is detected.</p>
+</li>
+</ul>
+<p><strong>Model Saving</strong>: After training, the model is saved for each target variable. This ensures that the trained models can be reused for inference and further fine-tuning, making the forecasting process more efficient and scalable.</p>
+<p>The LSTM model, with its ability to model complex sequential data, has proven to be a powerful tool in our visitor traffic forecasting pipeline, particularly for capturing the temporal dynamics of visitor flows across different regions of the Bavarian Forest National Park.</p>
 <h4 id="extratree-regressor-vs-lstm">ExtraTree Regressor vs LSTM</h4>
 <ul>
 <li>Comparison of models:<ul>
