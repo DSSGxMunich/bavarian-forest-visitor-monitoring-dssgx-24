@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
-        <title>Methodology and Approach - Docs for the Bavarian Forest National Park Project</title>
+        <title>III. Methodology and Approach - Docs for the Bavarian Forest National Park Project</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.06209087.min.css">
       
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#methodology-and-approach" class="md-skip">
+        <a href="#iii-methodology-and-approach" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Methodology and Approach
+              III. Methodology and Approach
             
           </span>
         </div>
@@ -160,7 +160,7 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    bavarian forest project
   </span>
   
 
@@ -225,15 +225,255 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    III. Methodology and Approach
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Methodology and Approach
+    III. Methodology and Approach
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repository-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description-of-the-data-sources-used-methods-for-data-sourcing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description of the Data Sources Used &amp; Methods for Data Sourcing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streamlit-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Streamlit App
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Streamlit App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-of-the-data-preprocessing-and-cleaning-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description of the Data Preprocessing and Cleaning Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-queryaccessibilityupload-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Query/Accessibility/Upload Section
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prediction-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prediction Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prediction Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-of-the-data-preprocessing-and-cleaning-steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description of the Data Preprocessing and Cleaning Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description of the Data Preprocessing and Cleaning Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visitor-count-data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visitor Count Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weather-data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weather Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visitor-center-data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visitor Center Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parking-data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parking Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-preprocessing-and-feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preprocessing and Feature Engineering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Preprocessing and Feature Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#region-wise-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Region-wise Mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature Engineering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-numerical-cyclic-and-categorical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Numerical, Cyclic, and Categorical Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extratree-regressor-vs-lstm" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExtraTree Regressor vs LSTM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -359,6 +599,224 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repository-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description-of-the-data-sources-used-methods-for-data-sourcing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description of the Data Sources Used &amp; Methods for Data Sourcing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streamlit-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Streamlit App
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Streamlit App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-of-the-data-preprocessing-and-cleaning-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description of the Data Preprocessing and Cleaning Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-queryaccessibilityupload-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Query/Accessibility/Upload Section
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prediction-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prediction Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prediction Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-of-the-data-preprocessing-and-cleaning-steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description of the Data Preprocessing and Cleaning Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description of the Data Preprocessing and Cleaning Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visitor-count-data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visitor Count Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weather-data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weather Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visitor-center-data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visitor Center Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parking-data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parking Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-preprocessing-and-feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preprocessing and Feature Engineering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Preprocessing and Feature Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#region-wise-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Region-wise Mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature Engineering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preprocessing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-numerical-cyclic-and-categorical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Numerical, Cyclic, and Categorical Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extratree-regressor-vs-lstm" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExtraTree Regressor vs LSTM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -372,7 +830,221 @@
                   
 
 
-<h1 id="methodology-and-approach">Methodology and Approach</h1>
+<h1 id="iii-methodology-and-approach">III. Methodology and Approach</h1>
+<h2 id="repository-overview">Repository Overview</h2>
+<ul>
+<li>Explanation of the code structure:<ul>
+<li>Overview of folders and files</li>
+<li>Key scripts and their purposes</li>
+<li>Description of helper modules</li>
+</ul>
+</li>
+</ul>
+<h2 id="description-of-the-data-sources-used-methods-for-data-sourcing">Description of the Data Sources Used &amp; Methods for Data Sourcing</h2>
+<ul>
+<li>List of data sources:<ul>
+<li><strong>Sensor Data for Visitor Counts</strong>:<ul>
+<li>Detailed visitor counts from various sensors across the park</li>
+</ul>
+</li>
+<li><strong>Weather Data</strong>:<ul>
+<li>Historical weather data relevant to visitor trends</li>
+</ul>
+</li>
+<li><strong>Visitor Center Data</strong>:<ul>
+<li>Visitor statistics from various centers within the park</li>
+</ul>
+</li>
+<li><strong>Parking Data</strong>:<ul>
+<li>Parking usage data to estimate visitor inflow/outflow</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Methods for data sourcing:<ul>
+<li>Data retrieval process</li>
+<li>Handling different data formats</li>
+<li>Storage and accessibility</li>
+</ul>
+</li>
+</ul>
+<h2 id="streamlit-app">Streamlit App</h2>
+<h3 id="description-of-the-data-preprocessing-and-cleaning-steps">Description of the Data Preprocessing and Cleaning Steps</h3>
+<ul>
+<li>Visitor count data:<ul>
+<li>Loading and parsing data</li>
+<li>Cleaning and handling missing data</li>
+<li>Sensor replacements and mapping</li>
+<li>Outlier detection and handling</li>
+<li>Traffic metrics calculation</li>
+</ul>
+</li>
+<li>Sensor data preprocessing:<ul>
+<li>Timestamp adjustments</li>
+<li>Merging and combining sensor data</li>
+<li>Handling overlapping periods</li>
+</ul>
+</li>
+<li>Weather data preprocessing:<ul>
+<li>Imputing missing weather values</li>
+<li>Mapping weather categories</li>
+<li>Integration with visitor data</li>
+</ul>
+</li>
+<li>Visitor center and parking data preprocessing:<ul>
+<li>Parsing and cleaning visitor center data</li>
+<li>Handling missing values in parking data</li>
+<li>Merging with sensor and weather data</li>
+</ul>
+</li>
+</ul>
+<h3 id="data-queryaccessibilityupload-section">Data Query/Accessibility/Upload Section</h3>
+<ul>
+<li>Explanation of data accessibility:<ul>
+<li>Querying data from AWS S3</li>
+<li>Handling data uploads and user inputs</li>
+<li>Data filtering and visualization in the Streamlit app</li>
+</ul>
+</li>
+<li>Features and Techniques:<ul>
+<li>Data filtering options</li>
+<li>Visualization techniques used</li>
+<li>User interface elements</li>
+</ul>
+</li>
+</ul>
+<h2 id="prediction-pipeline">Prediction Pipeline</h2>
+<h3 id="description-of-the-data-preprocessing-and-cleaning-steps_1">Description of the Data Preprocessing and Cleaning Steps</h3>
+<p>In our project, we utilized various data sources, including sensor data for visitor counts, weather data, visitor center data, and parking data. These datasets were initially in different formats, necessitating a thorough cleaning and preprocessing process to unify them.</p>
+<h4 id="visitor-count-data-preprocessing">Visitor Count Data Preprocessing</h4>
+<p>For the visitor count data, several crucial steps were taken:</p>
+<ul>
+<li>
+<p><strong>Removing Unwanted Data</strong>: We excluded any data prior to "2016-05-10 03:00:00" since no sensors were installed before this date, ensuring our analysis focused on relevant data.</p>
+</li>
+<li>
+<p><strong>Fixing Column Names</strong>: The original dataset contained inconsistently named columns due to sensor replacements and renaming. We implemented a mapping process to unify sensor names, allowing us to aggregate readings under single names. For example, 'Bucina PYRO IN' and 'Bucina_Multi IN' were combined into 'Bucina MERGED IN'.</p>
+</li>
+<li>
+<p><strong>Correcting and Imputing Timestamps</strong>: We adjusted timestamps to account for daylight saving time changes, ensuring the integrity of our time series data. Missing values were filled in from subsequent rows to maintain continuity.</p>
+</li>
+<li>
+<p><strong>Handling Non-Replaced Sensors</strong>: Columns representing non-replaced sensors were set to NaN for values recorded before their replacement dates, as they no longer provided valid data.</p>
+</li>
+<li>
+<p><strong>Correcting Overlapping Sensor Data</strong>: In cases where both old and new sensors reported data during overlapping periods, we set values to NaN for old sensors after their replacement dates to avoid skewing our analysis.</p>
+</li>
+<li>
+<p><strong>Merging Columns</strong>: We merged columns based on predefined mappings to create simplified combined columns, such as 'Bucina MERGED IN'. This step eliminated redundancy and ensured a focus on relevant data.</p>
+</li>
+<li>
+<p><strong>Outlier Handling</strong>: Any visitor count exceeding 800 was transformed to NaN, as these values were deemed outliers and not representative of typical sensor readings.</p>
+</li>
+<li>
+<p><strong>Calculating Traffic Metrics</strong>: We derived key traffic metrics, including:</p>
+<ul>
+<li><code>traffic_abs</code>: Total counts (in + out) from all sensors.</li>
+<li><code>sum_IN_abs</code> and <code>sum_OUT_abs</code>: Sums of incoming and outgoing counts.</li>
+<li><code>occupancy_abs</code>: A cumulative measure representing occupancy over time, aiding in trend analysis.</li>
+</ul>
+</li>
+</ul>
+<h4 id="weather-data-preprocessing">Weather Data Preprocessing</h4>
+<p>The weather data was sourced and preprocessed to ensure consistency and reliability for our analysis. The following key steps were taken:</p>
+<ul>
+<li>
+<p><strong>Data Sourcing</strong>: </p>
+<ul>
+<li>We retrieved hourly weather data from the Meteostat API for the Bavarian Forest region from January 1, 2016, to September 3, 2024. This involved setting geographical coordinates to target the specific area.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cleaning and Formatting</strong>: </p>
+<ul>
+<li>Unnecessary columns such as dew point, snow, wind direction, and others were removed to simplify the dataset.</li>
+<li>The remaining columns were renamed for clarity, transforming them into more descriptive titles like 'Temperature (°C)', 'Precipitation (mm)', and 'Relative Humidity (%)'.</li>
+<li>The 'Time' column was converted into a proper datetime format for seamless time series analysis.</li>
+</ul>
+</li>
+<li>
+<p><strong>Imputation of Missing Values</strong>: </p>
+<ul>
+<li>We implemented a function to fill missing values using linear interpolation, ensuring that gaps in the data were appropriately addressed. If a significant percentage of zero values (over 60%) was detected in any parameter, we opted to fill missing entries with zero.</li>
+<li>This approach helped maintain the integrity of the dataset while providing a more accurate representation of weather conditions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Storage</strong>: </p>
+<ul>
+<li>The processed weather data was saved to an AWS S3 bucket, facilitating easy access and retrieval for subsequent analyses.</li>
+</ul>
+</li>
+</ul>
+<p>By carefully processing the weather data, we ensured it was well-prepared for integration with visitor count data and other datasets in our predictive modeling pipeline.</p>
+<h4 id="visitor-center-data-preprocessing">Visitor Center Data Preprocessing</h4>
+<p><em>(Placeholder: Add details about the cleaning and preprocessing steps for visitor center data here.)</em></p>
+<h4 id="parking-data-preprocessing">Parking Data Preprocessing</h4>
+<p><em>(Placeholder: Add details about the cleaning and preprocessing steps for parking data here.)</em></p>
+<h3 id="data-integration">Data Integration</h3>
+<p>We joined the preprocessed datasets—visitor counts, weather, and visitor center data—based on their timestamps to create a unified dataset for efficient modeling. This integration ensures that all data points align in hourly format, facilitating a comprehensive analysis of visitor traffic patterns.</p>
+<p>The resulting joined dataset encompasses all relevant features from each source, providing a robust foundation for our predictive modeling efforts. This approach allows us to leverage the combined insights from different datasets, enhancing the accuracy and effectiveness of our forecasts.</p>
+<h3 id="data-preprocessing-and-feature-engineering">Data Preprocessing and Feature Engineering</h3>
+<p>After joining the data, we conducted various tasks, including feature selection and feature engineering. Below are the relevant aspects of this process:</p>
+<h4 id="region-wise-mapping">Region-wise Mapping</h4>
+<p>The Bavarian Forest National Park is divided into six regions, and we grouped the sensors accordingly. For each region, we aggregated the IN and OUT values based on the specific sensors that belong to that region:</p>
+<blockquote>
+<p><strong>Falkenstein-Schwellhäusl</strong><br />
+Sensors: Bayerisch Eisenstein, Brechhäuslau, Deffernik, Ferdinandsthal, Schillerstraße  </p>
+<p><strong>Nationalparkzentrum Falkenstein</strong><br />
+Sensors: Falkenstein 1, Falkenstein 2  </p>
+<p><strong>Scheuereck-Schachten-Trinkwassertalsperre</strong><br />
+Sensors: Gsenget, Scheuereck, Trinkwassertalsperre  </p>
+<p><strong>Lusen-Mauth-Finsterau</strong><br />
+Sensors: Bucina, Felswandergebiet, Fredenbrücke, Schwarzbachbrücke, Waldhausreibe, Wistlberg, Sagwassersäge  </p>
+<p><strong>Rachel-Spiegelau</strong><br />
+Sensors: Diensthüttenstraße, Gfäll, Klingenbrunner Wald, Klosterfilz, Racheldiensthütte, Waldspielgelände  </p>
+<p><strong>Nationalparkzentrum Lusen</strong><br />
+Sensors: Lusen 1, Lusen 2, Lusen 3  </p>
+</blockquote>
+<p>The readings from these sensors were combined to provide the total IN and OUT values for the region.</p>
+<h4 id="feature-engineering">Feature Engineering</h4>
+<p>We integrated additional features, including:</p>
+<ul>
+<li>Z-scores for daily maximum temperature, relative humidity, and wind speed.</li>
+<li>Distance to the nearest holidays for both Bayern and Czech Republic.</li>
+</ul>
+<h4 id="data-preprocessing">Data Preprocessing</h4>
+<h4 id="handling-numerical-cyclic-and-categorical-features">Handling Numerical, Cyclic, and Categorical Features</h4>
+<ol>
+<li>
+<p><strong>Cyclic Features</strong>: We transformed cyclical features (e.g., hour, day) using sine and cosine transformations to maintain the cyclic nature.</p>
+</li>
+<li>
+<p><strong>Numerical Features</strong>: Z-score normalization was applied to standardize numerical features, ensuring they have a mean of 0 and a standard deviation of 1.</p>
+</li>
+<li>
+<p><strong>Categorical Features</strong>: Categorical columns were converted to string types for proper processing and analysis.</p>
+</li>
+</ol>
+<h4 id="additional-steps">Additional Steps</h4>
+<ul>
+<li><strong>Datetime Conversion</strong>: The 'Time' column was converted to a datetime format for easier time-based indexing and analysis.</li>
+<li><strong>Summation of IN and OUT Values</strong>: We summed the IN and OUT values for each region based on the defined mappings.</li>
+<li><strong>Data Type Changes</strong>: Data types were adjusted according to predefined specifications to ensure consistency and optimize performance.</li>
+</ul>
+<p>This systematic approach to preprocessing and feature engineering sets a solid foundation for subsequent modeling and analysis.</p>
+<h3 id="modeling">Modeling</h3>
+<p>We have sliced the data from January 1, 2023, to July 22, 2024, for training purposes. During our experimentation phase, we explored various forecasting models to identify the most effective approach for predicting visitor traffic in the Bavarian Forest National Park. Ultimately, the ExtraTree Regressor and LSTM (Long Short-Term Memory) models demonstrated superior performance compared to other models.</p>
+<h4 id="extratree-regressor-vs-lstm">ExtraTree Regressor vs LSTM</h4>
+<ul>
+<li>Comparison of models:<ul>
+<li>Model architectures and configurations</li>
+<li>Performance evaluation on test data</li>
+<li>Strengths and weaknesses of each approach</li>
+<li>Decision rationale for choosing LSTM or ExtraTree Regressor</li>
+</ul>
+</li>
+</ul>
 
 
 
