@@ -8,3 +8,4 @@ streamlit-pandas-profiling
 ydata-profiling
 pyarrow
 toml
+openpyxl

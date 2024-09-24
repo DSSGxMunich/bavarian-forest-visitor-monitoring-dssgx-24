@@ -1,5 +1,11 @@
 pandas
 jupyter
+openpyxl
+prettytable
+plotly
+pycaret
+pyarrow
+numpy
 plotly
 matplotlib
 chardet

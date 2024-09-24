@@ -1,0 +1,18 @@
+site_name: Docs for the Bavarian Forest National Park Project
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - index.md
+  - executive-summary.md
+  - project-overview.md
+  - methodology-and-approach.md
+  - findings-and-results.md
+  - limitations-and-challenges.md
+  - future-work.md
+  - references-and-appendix.md
+  - api-reference.md
