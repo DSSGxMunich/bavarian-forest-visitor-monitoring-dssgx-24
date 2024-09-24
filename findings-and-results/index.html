@@ -245,6 +245,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Findings and Results
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -254,6 +265,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model-fit-indices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Fit Indices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Insights
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -359,6 +416,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model-fit-indices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Fit Indices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Insights
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -373,6 +465,190 @@
 
 
 <h1 id="findings-and-results">Findings and Results</h1>
+<p>The analysis of visitor traffic in the Bavarian Forest National Park utilized the Extra Trees Regressor, focusing on predictions across six distinct regions. We examined 15 target variables, including total visitor counts and IN/OUT values for each region, as well as overall metrics for the park.</p>
+<h3 id="model-fit-indices">Model Fit Indices</h3>
+<p>The performance of the Extra Trees Regressor was evaluated using 5-fold cross-validation for both training and test data. The average results across all folds for the target variables are summarized in the table below:</p>
+<table>
+<thead>
+<tr>
+<th>Target/Model</th>
+<th>MAE</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>R²</th>
+<th>RMSLE</th>
+<th>MAPE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Traffic (IN + OUT for entire Park)</td>
+<td>46.1162</td>
+<td>8917.1099</td>
+<td>92.2189</td>
+<td>0.8081</td>
+<td>0.8319</td>
+<td>1.0861</td>
+</tr>
+<tr>
+<td>IN (entire park)</td>
+<td>24.3335</td>
+<td>2442.0343</td>
+<td>48.2164</td>
+<td>0.7974</td>
+<td>0.7300</td>
+<td>1.0028</td>
+</tr>
+<tr>
+<td>OUT (entire park)</td>
+<td>24.1747</td>
+<td>2458.5690</td>
+<td>48.4344</td>
+<td>0.7931</td>
+<td>0.8057</td>
+<td>1.0266</td>
+</tr>
+<tr>
+<td>Lusen-Mauth-Finsterau (IN)</td>
+<td>6.7317</td>
+<td>201.3070</td>
+<td>14.0569</td>
+<td>0.5393</td>
+<td>0.8434</td>
+<td>1.4217</td>
+</tr>
+<tr>
+<td>Lusen-Mauth-Finsterau (OUT)</td>
+<td>8.0701</td>
+<td>257.9571</td>
+<td>15.9973</td>
+<td>0.5997</td>
+<td>0.9015</td>
+<td>1.6323</td>
+</tr>
+<tr>
+<td>Nationalparkzentrum Lusen (IN)</td>
+<td>7.9054</td>
+<td>287.9660</td>
+<td>16.6835</td>
+<td>0.6963</td>
+<td>0.6837</td>
+<td>1.1265</td>
+</tr>
+<tr>
+<td>Nationalparkzentrum Lusen (OUT)</td>
+<td>7.5386</td>
+<td>260.5668</td>
+<td>15.9148</td>
+<td>0.7029</td>
+<td>0.7600</td>
+<td>1.1740</td>
+</tr>
+<tr>
+<td>Rachel-Spiegelau (IN)</td>
+<td>5.9471</td>
+<td>147.6946</td>
+<td>11.5325</td>
+<td>0.6194</td>
+<td>0.6604</td>
+<td>1.0976</td>
+</tr>
+<tr>
+<td>Rachel-Spiegelau (OUT)</td>
+<td>5.1613</td>
+<td>114.6056</td>
+<td>10.1086</td>
+<td>0.6211</td>
+<td>0.6459</td>
+<td>1.1172</td>
+</tr>
+<tr>
+<td>Falkenstein-Schwellhäusl (IN)</td>
+<td>6.3214</td>
+<td>175.2889</td>
+<td>12.7272</td>
+<td>0.7207</td>
+<td>0.6538</td>
+<td>1.0518</td>
+</tr>
+<tr>
+<td>Falkenstein-Schwellhäusl (OUT)</td>
+<td>5.9329</td>
+<td>159.9409</td>
+<td>12.2524</td>
+<td>0.7392</td>
+<td>0.6455</td>
+<td>1.0008</td>
+</tr>
+<tr>
+<td>Scheuereck-Schachten-Trinkwassertalsperre (IN)</td>
+<td>2.4397</td>
+<td>57.1253</td>
+<td>6.9169</td>
+<td>0.1636</td>
+<td>0.6783</td>
+<td>1.0380</td>
+</tr>
+<tr>
+<td>Scheuereck-Schachten-Trinkwassertalsperre (OUT)</td>
+<td>2.1488</td>
+<td>21.6679</td>
+<td>4.2865</td>
+<td>0.3744</td>
+<td>0.6556</td>
+<td>1.0186</td>
+</tr>
+<tr>
+<td>Nationalparkzentrum Falkenstein (IN)</td>
+<td>5.0964</td>
+<td>116.4658</td>
+<td>10.7654</td>
+<td>0.6457</td>
+<td>0.6387</td>
+<td>1.0955</td>
+</tr>
+<tr>
+<td>Nationalparkzentrum Falkenstein (OUT)</td>
+<td>4.7758</td>
+<td>106.0070</td>
+<td>10.2023</td>
+<td>0.6063</td>
+<td>0.6482</td>
+<td>1.2331</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-insights">Key Insights</h3>
+<ol>
+<li>
+<p><strong>Overall Visitor Traffic</strong>:</p>
+<ul>
+<li>The model predicted an average total traffic count (IN + OUT) of <strong>46.12</strong> with a <strong>R² value of 0.8081</strong>, indicating a strong relationship between predicted and actual values. This suggests that the model successfully captures the dynamics of visitor traffic across the entire park.</li>
+</ul>
+</li>
+<li>
+<p><strong>Regional Performance</strong>:</p>
+<ul>
+<li><strong>Lusen-Mauth-Finsterau</strong> showed relatively lower prediction errors, with MAE values of <strong>6.73</strong> (IN) and <strong>8.07</strong> (OUT). These figures suggest a stable visitor count in this region, potentially influenced by its accessibility and visitor amenities.</li>
+<li><strong>Nationalparkzentrum Lusen</strong> also performed well, with MAE values of <strong>7.91</strong> (IN) and <strong>7.54</strong> (OUT), indicating a robust model fit for this popular tourist area.</li>
+<li>In contrast, the <strong>Scheuereck-Schachten-Trinkwassertalsperre</strong> region exhibited the lowest prediction accuracy, with MAE values of <strong>2.44</strong> (IN) and <strong>2.15</strong> (OUT). The low R² value of <strong>0.1636</strong> for IN indicates that this region's visitor traffic may be influenced by more unpredictable factors, warranting further investigation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Traffic Trends</strong>:</p>
+<ul>
+<li>The overall IN and OUT values for the park were relatively balanced, with minor variations indicating consistent visitor patterns throughout the year. For example, the predicted IN count of <strong>24.33</strong> for the entire park suggests that visitors are more inclined to enter the park compared to exiting, reflecting a positive visitor experience and prolonged stays.</li>
+</ul>
+</li>
+<li>
+<p><strong>Regional Disparities</strong>:</p>
+<ul>
+<li>Some regions, such as <strong>Rachel-Spiegelau</strong> and <strong>Falkenstein-Schwellhäusl</strong>, demonstrated relatively close MAE values (around <strong>5-7</strong> for both IN and OUT),       suggesting similar patterns of visitor behavior. The consistent metrics across these regions may indicate comparable attractions or services that draw visitors in and keep them within these areas.</li>
+</ul>
+</li>
+</ol>
+<h3 id="conclusion">Conclusion</h3>
+<p>The findings illustrate the Extra Trees Regressor's effectiveness in predicting visitor traffic across various regions of the Bavarian Forest National Park. The results indicate strong predictive power, especially for areas with consistent visitor patterns. These insights can aid park management in resource allocation, event planning, and enhancing visitor experience based on anticipated traffic flows.</p>
 
 
 
