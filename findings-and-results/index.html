@@ -700,7 +700,6 @@
 
 <h1 id="findings-and-results">Findings and Results</h1>
 <p>The analysis of visitor traffic in the Bavarian Forest National Park utilized the Extra Trees Regressor, focusing on predictions across six distinct regions. We examined 15 target variables, including total visitor counts and IN/OUT values for each region, as well as overall metrics for the park.</p>
-<p><img alt="alt text" src="../asset/Feature%20Importance%20Plots%20-%20Grid.png" /></p>
 <h2 id="model-training">Model Training</h2>
 <h3 id="model-fit-indices">Model Fit Indices</h3>
 <p>The performance of the Extra Trees Regressor was evaluated using 5-fold cross-validation for both training and test data. The average results across all folds for the target variables are summarized in the table below:</p>
@@ -900,15 +899,8 @@
 <p>We evaluated the ExtraTree Regressor model on unseen data from <strong>May 1, 2024, to July 22, 2024</strong>. The model was trained on historical data and used to forecast visitor traffic in the Bavarian Forest National Park (BFNP). The results across various regions and target variables are presented below.</p>
 <h3 id="evaluation-on-unseen-data">Evaluation on Unseen Data</h3>
 <p>The graphs presented above show how the model performs on <strong>unseen data</strong> from May to July 2024, which was not included in the model's training or validation phases. Evaluating on unseen data allows us to assess the model's generalizability and real-world applicability for forecasting future visitor counts.</p>
-<figure style={{ textAlign: "center" }}>
-    <img src="/asset/Comparison of Predicted and Actual Visitor Counts to Bavarian Forest National Park (BFNP) on Unseen Data - 1.png" alt="Here the alt text"  style={{ display: "block", marginLeft: "auto", marginRight: "auto", marginBottom: "10px" }} width="700"/>
-    <span style={{ color: "gray" }}>comparison of predicted and actual values on unseen data (1)</span>
-</figure>
-
-<figure style={{ textAlign: "center" }}>
-    <img src="/asset/Comparison of Predicted and Actual Visitor Counts to Bavarian Forest National Park (BFNP) on Unseen Data - 2.png" alt="Here the alt text"  style={{ display: "block", marginLeft: "auto", marginRight: "auto", marginBottom: "10px" }} width="700"/>
-    <span style={{ color: "gray" }}>comparison of predicted and actual values on unseen data (2)</span>
-</figure>
+<p><img alt="" src="../asset/Comparison%20of%20Predicted%20and%20Actual%20Visitor%20Counts%20to%20Bavarian%20Forest%20National%20Park%20%28BFNP%29%20on%20Unseen%20Data%20-%201.png" title="comparison of predicted and actual values on unseen data (1)" /></p>
+<p><img alt="" src="../asset/Comparison%20of%20Predicted%20and%20Actual%20Visitor%20Counts%20to%20Bavarian%20Forest%20National%20Park%20%28BFNP%29%20on%20Unseen%20Data%20-%202.png" title="comparison of predicted and actual values on unseen data (2)" /></p>
 <hr />
 <p><strong>Traffic Abs</strong></p>
 <p>The total park traffic (<code>traffic_abs</code>) is consistently overestimated in both low and high-traffic periods. The predicted values follow the general trend of the actual counts but are consistently higher, particularly during low-traffic periods.</p>
