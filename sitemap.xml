@@ -9,15 +9,7 @@
          <lastmod>2024-10-13</lastmod>
     </url>
     <url>
-         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/data/</loc>
-         <lastmod>2024-10-13</lastmod>
-    </url>
-    <url>
          <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/findings-and-results/</loc>
-         <lastmod>2024-10-13</lastmod>
-    </url>
-    <url>
-         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/homepage/</loc>
          <lastmod>2024-10-13</lastmod>
     </url>
     <url>
@@ -29,15 +21,23 @@
          <lastmod>2024-10-13</lastmod>
     </url>
     <url>
-         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/prediction-pipeline/</loc>
-         <lastmod>2024-10-13</lastmod>
-    </url>
-    <url>
          <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/project-factsheet/</loc>
          <lastmod>2024-10-13</lastmod>
     </url>
     <url>
-         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/user-frontends/</loc>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/approach/</loc>
+         <lastmod>2024-10-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/approach/data/</loc>
+         <lastmod>2024-10-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/approach/prediction-pipeline/</loc>
+         <lastmod>2024-10-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/approach/user-frontends/</loc>
          <lastmod>2024-10-13</lastmod>
     </url>
 </urlset>
