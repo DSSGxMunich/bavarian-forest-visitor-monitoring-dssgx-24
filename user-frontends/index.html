@@ -1,0 +1,842 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/user-frontends/">
+      
+      
+        <link rel="prev" href="../prediction-pipeline/">
+      
+      
+        <link rel="next" href="../findings-and-results/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+    
+    
+      
+        <title>Step 3: Building the User Frontends - Docs for the Bavarian Forest National Park Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-3-building-the-user-frontends" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Docs for the Bavarian Forest National Park Project" class="md-header__button md-logo" aria-label="Docs for the Bavarian Forest National Park Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs for the Bavarian Forest National Park Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step 3: Building the User Frontends
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Docs for the Bavarian Forest National Park Project" class="md-nav__button md-logo" aria-label="Docs for the Bavarian Forest National Park Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Docs for the Bavarian Forest National Park Project
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../homepage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-factsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Factsheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Our Approach
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Our Approach
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Step 1: Data Sourcing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prediction-pipeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Step 2: Building the Prediction Pipeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Step 3: Building the User Frontends
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Step 3: Building the User Frontends
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visitor-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visitor Dashboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administration-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administration Dashboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-accessibility-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Accessibility Point
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Accessibility Point">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-upload-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Upload Section
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-download-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Download Section
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-query-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Query Section
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../findings-and-results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Findings and Final Product
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations-and-challenges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discussion and Recommendations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visitor-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visitor Dashboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#administration-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administration Dashboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-accessibility-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Accessibility Point
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Accessibility Point">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-upload-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Upload Section
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-download-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Download Section
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-query-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Query Section
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="step-3-building-the-user-frontends">Step 3: Building the User Frontends</h1>
+<h2 id="overview">Overview</h2>
+<p>In this section, we will describe how we built the different user frontends. We have built an end-to-end solution through our Streamlit app, which features three main dashboards. The Visitor Dashboard enables users to plan their trips effectively, providing tools to enhance their experience at the park. The Administration Dashboard assists park management in making strategic decisions regarding resource allocation, optimizing operational efficiency. Additionally, a dedicated Data Accessibility Point is included, which is exclusively accessible to park administration, allowing them to manage and query important data seamlessly.</p>
+<p><img alt="E2E Pipeline Step 3 User Frontend" src="../asset/E2E_Pipeline_User_Frontend.png" /></p>
+<hr />
+<h2 id="visitor-dashboard">Visitor Dashboard</h2>
+<p>The Visitor Dashboard serves as a comprehensive tool for visitors to the Bavarian Forest National Park, offering real-time data and insights to enhance their experience.</p>
+<ol>
+<li>
+<p><strong>Real-Time Weather Data</strong>:</p>
+<ul>
+<li>We have integrated real-time weather data from Metostat for the upcoming week, ensuring visitors have accurate information about current conditions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parking Data</strong>:</p>
+<ul>
+<li>Parking availability is monitored using data fetched from Bayern Cloud for 12 parking sensors. Currently, 10 sensors are operational, as 2 are offline.</li>
+<li>Visualization of parking occupancy is provided by fetching the coordinates of these sensors, indicating high, medium, and low thresholds for parking availability.</li>
+</ul>
+</li>
+<li>
+<p><strong>Visitor Traffic Forecast</strong>:</p>
+<ul>
+<li>Forecasted visitor traffic is displayed for various regions of the park on an hourly basis for the coming week.</li>
+<li>Users can select specific dates and regions to view 'IN' and 'OUT' values for each region, overall traffic across the park, and total incoming and outgoing visitor flows.</li>
+</ul>
+</li>
+<li>
+<p><strong>Recreational Activities</strong>:</p>
+<p>The dashboard highlights various recreational activities available in the park, including:</p>
+<ul>
+<li><strong>Hiking</strong>: 🥾 Explore trails through the scenic wilderness. <a href="https://www.nationalpark-bayerischer-wald.bayern.de/english/visitor/hiking/index.htm">Learn More</a></li>
+<li><strong>Cycling</strong>: 🚴‍♂️ Cycle through picturesque routes. <a href="https://www.nationalpark-bayerischer-wald.bayern.de/english/visitor/bicycling/index.htm">Learn More</a></li>
+<li><strong>Camping</strong>: 🏕️ Relax under the stars at designated camping spots. <a href="https://www.nationalpark-bayerischer-wald.bayern.de/english/visitor/facilities/camping/index.htm">Learn More</a></li>
+<li><strong>Snowshoeing</strong>: 🌨️ Enjoy snowshoeing during the winter months. <a href="https://www.nationalpark-bayerischer-wald.bayern.de/english/visitor/snowshoeing/index.htm">Learn More</a></li>
+<li><strong>Skiing</strong>: 🎿 Ski on the best cross-country trails. <a href="https://www.nationalpark-bayerischer-wald.bayern.de/english/visitor/cross_country_skiing/index.htm">Learn More</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Language Selection</strong>:</p>
+<ul>
+<li>The dashboard supports both German and English languages, making it accessible to a broader audience.</li>
+</ul>
+</li>
+<li>
+<p><strong>Additional Information</strong>:</p>
+<ul>
+<li>A section for <strong>Other Information</strong> provides valuable insights to visitors:<ul>
+<li><strong>Visitor Centers</strong>: 🏛️ Information about the main visitor centers in the Bavarian Forest. <a href="https://www.nationalpark-bayerischer-wald.bayern.de/english/visitor/facilities/index.htm">Learn More</a></li>
+<li><strong>Popular Entrances to the Park</strong>:<ul>
+<li><strong>Entrance 1: Falkenstein</strong>: Access to hiking trails and the Falkenstein mountain. <a href="https://www.nationalpark-bayerischer-wald.bayern.de/english/visitor/facilities/npc_falkenstein/index.htm">Learn More</a></li>
+<li><strong>Entrance 2: Lusen</strong>: Gateway to challenging trails on the Lusen mountain. <a href="https://www.nationalpark-bayerischer-wald.bayern.de/english/visitor/facilities/npc_lusen/index.htm">Learn More</a></li>
+</ul>
+</li>
+<li><strong>Best Way to Get There</strong>: 🚌 Information on transportation options to reach the Bavarian Forest. <a href="https://www.nationalpark-bayerischer-wald.bayern.de/english/service/getting_there/index.htm">Learn More</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="administration-dashboard">Administration Dashboard</h2>
+<p>The Administration Dashboard is designed to assist park management in making strategic decisions based on comprehensive data and analytics. It provides essential insights into visitor counts and parking occupancy to optimize operational efficiency.</p>
+<ol>
+<li>
+<p><strong>Forecasted Hourly Predictions</strong>:</p>
+<ul>
+<li>The dashboard presents the distribution of forecasted visitor traffic across the park for the next seven days, allowing administrators to anticipate visitor flows and plan resources accordingly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Absolute Visitor Counts</strong>:</p>
+<ul>
+<li>Unlike the Visitor Dashboard, the Administration Dashboard provides absolute numbers for visitor counts, enabling precise tracking of park attendance. Visualizations of these counts help in understanding trends and patterns over time.</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-Time Parking Occupancy</strong>:</p>
+<ul>
+<li>Real-time data for parking occupancy is displayed for 10 out of 12 parking sensors. For each selected location, the dashboard shows:<ul>
+<li><strong>Available Spaces</strong>: The current number of available parking spaces.</li>
+<li><strong>Capacity</strong>: The total capacity of the selected parking area.</li>
+<li><strong>Occupancy Rate</strong>: The percentage of the parking area currently occupied.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="data-accessibility-point">Data Accessibility Point</h2>
+<p>The Data Accessibility Point provides park administration with a seamless interface for managing and querying important data. It includes features for both uploading and downloading data, ensuring efficient data handling.</p>
+<h3 id="data-upload-section">Data Upload Section</h3>
+<ul>
+<li>
+<p>Administrators can upload data related to:</p>
+<ul>
+<li><strong>Visitor Count Sensors</strong></li>
+<li><strong>Visitor Count Centers</strong></li>
+<li><strong>Other Data Types</strong></li>
+</ul>
+</li>
+<li>
+<p>Before uploading, users can preview the entire dataset and generate a data summary report using Pandas Profiling. This allows for a quick assessment of the data quality and structure.</p>
+</li>
+<li>Once reviewed, the uploaded data is stored securely in the system for future access and analysis.</li>
+</ul>
+<h3 id="data-download-section">Data Download Section</h3>
+<ul>
+<li>Users can select specific data categories to download, including:<ul>
+<li><strong>Visitor Count Sensors</strong></li>
+<li><strong>Visitor Count Centers</strong></li>
+<li><strong>Other Categories</strong></li>
+</ul>
+</li>
+<li>A preview of the selected data will be available, ensuring that users can verify the information before downloading.</li>
+</ul>
+<h3 id="data-query-section">Data Query Section</h3>
+<p>The query section of the Streamlit application is designed to enable users to access and analyze data related to three main categories: <strong>Weather</strong>, <strong>Visitor Occupancy</strong>, and <strong>Parking</strong>. Users can apply various filters such as date ranges, months, and seasons to customize their queries. Based on these selected criteria, the application generates specific queries to retrieve data points from the underlying dataset. This feature allows users to efficiently extract relevant insights.</p>
+<p><strong>Main Categories of Data</strong></p>
+<ol>
+<li>
+<p><strong>Weather Data</strong>: Includes properties like temperature, precipitation, wind speed, relative humidity, and sunshine duration. Users can retrieve meteorological information for specific time periods or analyze patterns across months and seasons.</p>
+</li>
+<li>
+<p><strong>Visitor Occupancy</strong>: Provides data from various visitor sensors, which include metrics such as the number of visitors entering ("IN"), exiting ("OUT"), or the total number of visitors ("TOTAL") at specific locations. This data helps to monitor and predict visitor flow within the park.</p>
+</li>
+<li>
+<p><strong>Parking</strong>: Captures data from parking sensors, such as occupancy levels, parking capacity, and occupancy rates. This information is useful for managing and analyzing parking facilities' utilization.</p>
+</li>
+</ol>
+<p><strong>Filters for Query Refinement</strong></p>
+<p>To refine their queries, users can apply various filters:</p>
+<ul>
+<li>
+<p><strong>Date Selection</strong>: Allows users to specify a start and end date, limiting the query to a particular timeframe. By default, the date range is set to retrieve data from the past 7 days.</p>
+</li>
+<li>
+<p><strong>Months</strong>: Enables users to select one or more months from January to December, filtering data based on monthly patterns.</p>
+</li>
+<li>
+<p><strong>Seasons</strong>: Provides another way to filter data, allowing users to retrieve information for specific seasons: Winter, Spring, Summer, or Fall.</p>
+</li>
+<li>
+<p><strong>Year Filter</strong>: Automatically applied based on the selected months or seasons. If no months or seasons are selected, users are prompted to choose at least one to proceed with the query.</p>
+</li>
+</ul>
+<p>Each category also has its own set of specific filters. For example:
+- In the <strong>Weather</strong> category, users can select properties like temperature or precipitation.
+- In the <strong>Parking</strong> category, users can choose specific parking sensors and related data, such as occupancy rates.
+- In <strong>Visitor Occupancy</strong>, users can select which visitor sensors to focus on and what metrics to retrieve (e.g., IN, OUT, or TOTAL visitors).</p>
+<p><strong>Types of Queries</strong></p>
+<p>Queries are categorized into three types:</p>
+<ol>
+<li>
+<p><strong>Date Range Queries</strong>: Allow users to retrieve data within a specific timeframe. For instance, users might ask, “What was the temperature between September 1, 2024, and September 7, 2024?” This type of query is available across all three categories (Weather, Visitor Occupancy, Parking), helping users analyze short-term trends.</p>
+</li>
+<li>
+<p><strong>Monthly Queries</strong>: Provide aggregated data for a specific month. For example, a user might query, “What was the total visitor count in August 2024?” Monthly queries help users examine patterns over the course of a particular month.</p>
+</li>
+<li>
+<p><strong>Seasonal Queries</strong>: Offer insight into broader seasonal trends. For example, users can ask, “What was the parking occupancy rate during the Summer of 2024?” These queries allow users to compare data across different seasons, which is useful for seasonal forecasting and planning.</p>
+</li>
+</ol>
+<p><strong>Query Generation Process</strong></p>
+<p>The query generation process is managed by the <code>generate_queries</code> function, which dynamically constructs query strings based on the user’s inputs. The function captures all selected filters—whether they pertain to date, month, season, or a specific category—and formats them into a query structure. These queries are then outputted in a structured format that the application can execute, allowing users to easily access the data they need.</p>
+<p>Additionally, the system incorporates error handling mechanisms. For instance, if the selected end date is earlier than the start date, users will receive an error message prompting them to correct the date range. Furthermore, if a query returns no data, an informative message is displayed, guiding the user to adjust their filters.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

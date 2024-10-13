@@ -2,34 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-13</lastmod>
     </url>
     <url>
          <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/api-reference/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-13</lastmod>
     </url>
     <url>
-         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/executive-summary/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/data/</loc>
+         <lastmod>2024-10-13</lastmod>
     </url>
     <url>
          <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/findings-and-results/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/homepage/</loc>
+         <lastmod>2024-10-13</lastmod>
     </url>
     <url>
          <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/limitations-and-challenges/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <lastmod>2024-10-13</lastmod>
     </url>
     <url>
-         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/methodology-and-approach/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/open-issues/</loc>
+         <lastmod>2024-10-13</lastmod>
     </url>
     <url>
-         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/project-overview/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/prediction-pipeline/</loc>
+         <lastmod>2024-10-13</lastmod>
     </url>
     <url>
-         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/references-and-appendix/</loc>
-         <lastmod>2024-10-06</lastmod>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/project-factsheet/</loc>
+         <lastmod>2024-10-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dssgxmunich.github.io/bavarian-forest-visitor-monitoring-dssgx-24/user-frontends/</loc>
+         <lastmod>2024-10-13</lastmod>
     </url>
 </urlset>
